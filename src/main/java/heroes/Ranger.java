@@ -1,6 +1,6 @@
-package org.example;
+package heroes;
 
-public class Ranger extends Hero{
+public class Ranger extends Hero {
 
     public Ranger(String name){
         super(name);

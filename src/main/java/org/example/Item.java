@@ -1,5 +1,7 @@
 package org.example;
 
+import enums.Slot;
+
 public abstract class Item {
     String name;
     int requiredLevel;

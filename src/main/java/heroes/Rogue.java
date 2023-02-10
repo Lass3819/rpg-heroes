@@ -1,4 +1,4 @@
-package org.example;
+package heroes;
 
 public class Rogue extends Hero {
     public Rogue(String name){

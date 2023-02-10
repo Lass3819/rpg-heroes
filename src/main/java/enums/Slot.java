@@ -1,4 +1,4 @@
-package org.example;
+package enums;
 
 public enum Slot {
     Weapon,

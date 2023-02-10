@@ -1,6 +1,6 @@
-package org.example;
+package heroes;
 
-public class Warrior extends Hero{
+public class Warrior extends Hero {
     public Warrior(String name){
         super(name);
         levelAttributes.updateLevels(5,2,1);
