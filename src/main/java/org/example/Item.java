@@ -1,17 +1,21 @@
 package org.example;
 
 import enums.Slot;
+import heroes.Hero;
 
 public abstract class Item {
-    String name;
-    int requiredLevel;
+    public String name;
+    public int requiredLevel;
+    public Slot slot;
+    public HeroAttributes stats;
+    public int weaponDamage;
 
-    Slot slot;
-
-    public Item(String name, int req, Slot slot){
+    public Item(String name, int req, Slot slot, HeroAttributes stats){
         this.name = name;
         this.requiredLevel = req;
         this.slot = slot;
+        this.stats = stats;
+        this.weaponDamage = 0;
 
     }
 

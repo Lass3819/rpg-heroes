@@ -1,6 +1,6 @@
 package enums;
 
-public enum Armortype {
+public enum ArmorType {
     Cloth,
     Leather,
     Mail,
