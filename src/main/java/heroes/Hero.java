@@ -4,8 +4,7 @@ import enums.ArmorType;
 import enums.Slot;
 import enums.WeaponType;
 import exceptions.InvalidWeaponException;
-import org.example.HeroAttributes;
-import org.example.Item;
+import items.Item;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +15,7 @@ public abstract class Hero {
     //every hero has the following shared fields:
     public String heroClass;
     public String name;
-    public int damagingAttribute;
+
     public int level;
     public HeroAttributes levelAttributes;
     public HashMap<Slot,Item> equipment;
@@ -40,26 +39,27 @@ public abstract class Hero {
         if(item.requiredLevel >level){
             throw new InvalidWeaponException("You are too low level to equip that");
         }
+        if(!validWeaponTypes.contains(item.weaponType) && !validArmorTypes.contains(item.armorType)){
+            throw new InvalidWeaponException("Your class cannot equip this item");
+        }
+
+        //check if something is already equipped and remove the stats from levelAttributes.
+        if(equipment.get(item.slot)!=null && item.slot!=Slot.Weapon) {
+            levelAttributes.removeLevelsFromClass(equipment.get(item.slot).stats);
+        }
         equipment.put(item.slot, item);
         if(item.stats == null){
             return;
         }
-        levelAttributes.updateLevelsFromClass(item.stats);
+        levelAttributes.addLevelsFromClass(item.stats);
     }
 
     public int damage(){
-        System.out.println(equipment.get(Slot.Weapon).weaponDamage);
-        System.out.println(damagingAttribute);
-        return equipment.get(Slot.Weapon).weaponDamage*(1+damagingAttribute/100);
+        return equipment.get(Slot.Weapon).weaponDamage*(1+damagingAttribute()/100);
 
 
     }
-
-    public int totalAttributes(){
-        int lvlAttribute = levelAttributes.totalLevels();
-        int armorAttributes = 0;
-        return lvlAttribute+armorAttributes;
-    }
+    public abstract int damagingAttribute();
 
     public void addValidArmorTypes( ArmorType[] arr ){
         validArmorTypes.addAll(Arrays.asList(arr));
@@ -71,12 +71,16 @@ public abstract class Hero {
 
     }
 
-    public void display(){
-        System.out.println("Your hero-name is: " + name);
-        System.out.println("Your class is: " + heroClass);
-        System.out.println("Your current level is: " + level);
-        System.out.println("Your attributes from levels and armor is: " + totalAttributes());
-        System.out.println("Your damage is: " + damage());
+    public String display(){
+        String toDisplay = "Name: ";
+        toDisplay+= name+"\n";
+        toDisplay += "Hero Class: "+heroClass+"\n";
+        toDisplay += "Level: " + level +"\n";
+        toDisplay += "Total strength: " + levelAttributes.strength +"\n";
+        toDisplay += "Total dexterity: " + levelAttributes.dexterity +"\n";
+        toDisplay += "Total intelligence: " + levelAttributes.intelligence +"\n";
+        toDisplay += "Damage: " + damage();
+        return toDisplay;
     }
 
 

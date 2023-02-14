@@ -1,4 +1,4 @@
-package org.example;
+package heroes;
 
 public class HeroAttributes {
     public int strength;
@@ -14,15 +14,12 @@ public class HeroAttributes {
         this.strength += str;
         this.intelligence += intelligence;
     }
-    public void updateLevelsFromClass(HeroAttributes stats){
+    public void addLevelsFromClass(HeroAttributes stats){
         updateLevels(stats.strength, stats.dexterity, stats.intelligence);
     }
-    public int totalLevels(){
-        return strength+dexterity+intelligence;
+    public void removeLevelsFromClass(HeroAttributes stats){
+        updateLevels(-stats.strength, -stats.dexterity, -stats.intelligence);
     }
-
-
-
 
 
 

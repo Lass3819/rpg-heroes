@@ -8,7 +8,6 @@ public class Rogue extends Hero {
         super(name);
         levelAttributes.updateLevels(2,6,1);
         heroClass = "Rogue";
-        this.damagingAttribute = levelAttributes.dexterity;
 
         // Adding weapon and armor types to mage.
         addValidWeaponType(new WeaponType[]{WeaponType.Daggers,WeaponType.Swords});
@@ -19,6 +18,10 @@ public class Rogue extends Hero {
     public void levelUp() {
         level++;
         levelAttributes.updateLevels(1,4,1);
+    }
+    //setting damaging attribute
+    public int damagingAttribute(){
+        return levelAttributes.dexterity;
     }
 
 }
