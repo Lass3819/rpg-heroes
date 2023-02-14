@@ -20,8 +20,11 @@ public class Rogue extends Hero {
         levelAttributes.updateLevels(1,4,1);
     }
     //setting damaging attribute
-    public int damagingAttribute(){
+    public int damagingLevelAttribute(){
         return levelAttributes.dexterity;
+    }
+    public int damagingArmorAttribute(){
+        return armorAttributes.dexterity;
     }
 
 }

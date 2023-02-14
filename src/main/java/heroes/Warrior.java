@@ -19,7 +19,10 @@ public class Warrior extends Hero {
         levelAttributes.updateLevels(3,2,1);
     }
     //setting damaging attribute
-    public int damagingAttribute(){
+    public int damagingLevelAttribute(){
         return levelAttributes.strength;
+    }
+    public int damagingArmorAttribute(){
+        return armorAttributes.strength;
     }
 }

@@ -17,10 +17,13 @@ public class Ranger extends Hero {
 
     public void levelUp() {
         level++;
-        levelAttributes.updateLevels(1,5,8);
+        levelAttributes.updateLevels(1,5,1);
     }
     //setting damaging attribute
-    public int damagingAttribute(){
+    public int damagingLevelAttribute(){
         return levelAttributes.dexterity;
+    }
+    public int damagingArmorAttribute(){
+        return armorAttributes.dexterity;
     }
 }

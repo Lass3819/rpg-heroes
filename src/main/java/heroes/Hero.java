@@ -17,7 +17,8 @@ public abstract class Hero {
     public String name;
 
     public int level;
-    public HeroAttributes levelAttributes;
+    public Attributes levelAttributes;
+    public Attributes armorAttributes;
     public HashMap<Slot,Item> equipment;
     public List<WeaponType> validWeaponTypes = new ArrayList<>();
     public List<ArmorType> validArmorTypes = new ArrayList<>();
@@ -26,7 +27,8 @@ public abstract class Hero {
     public Hero(String name){
         this.name = name;
         level = 1;
-        this.levelAttributes = new HeroAttributes(0,0,0);
+        this.levelAttributes = new Attributes(0,0,0);
+        this.armorAttributes = new Attributes(0,0,0);
         //initialize equipment with null values in each slot.
         equipment = new HashMap<>();
         for(Slot slots: Slot.values()){
@@ -45,21 +47,30 @@ public abstract class Hero {
 
         //check if something is already equipped and remove the stats from levelAttributes.
         if(equipment.get(item.slot)!=null && item.slot!=Slot.Weapon) {
-            levelAttributes.removeLevelsFromClass(equipment.get(item.slot).stats);
+            armorAttributes.removeLevelsFromClass(equipment.get(item.slot).stats);
         }
         equipment.put(item.slot, item);
         if(item.stats == null){
             return;
         }
-        levelAttributes.addLevelsFromClass(item.stats);
+        armorAttributes.addLevelsFromClass(item.stats);
     }
 
     public int damage(){
-        return equipment.get(Slot.Weapon).weaponDamage*(1+damagingAttribute()/100);
+        int armorAtt = damagingArmorAttribute();
+        int levelAtt = damagingLevelAttribute();
+        int damagingAtt = armorAtt + levelAtt;
+
+        if (equipment.get(Slot.Weapon) == null) {
+            return 1 + damagingAtt / 100;
+        }
+
+        return equipment.get(Slot.Weapon).weaponDamage * (1 + damagingAtt / 100);
 
 
     }
-    public abstract int damagingAttribute();
+    public abstract int damagingLevelAttribute();
+    public abstract int damagingArmorAttribute();
 
     public void addValidArmorTypes( ArmorType[] arr ){
         validArmorTypes.addAll(Arrays.asList(arr));

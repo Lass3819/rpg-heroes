@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e1e40e-92e0-4f0d-88e6-8dba650cf297" name="Changes" comment="worked on items and equping them. Currently slight bug where it won't&#10;update stats when equipping something.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/items/Armor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/items/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/WeaponTest.java" afterDir="false" />
+    <list default="true" id="51e1e40e-92e0-4f0d-88e6-8dba650cf297" name="Changes" comment="Seems like everything is working correctly now.&#10;Next will start working on Unit test to see if the above is actually&#10;true.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ArmorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RangerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RogueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WarriorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Attributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Rogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Armor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/heroes/HeroAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WeaponTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MageTest">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="rpg-heroes" />
@@ -80,6 +82,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArmorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArmorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WarriorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeaponTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WeaponTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeaponTest.check_if_name_is_correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WeaponTest" />
+      <option name="METHOD_NAME" value="check_if_name_is_correct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MageTest" />
+        <item itemvalue="JUnit.ArmorTest" />
+        <item itemvalue="JUnit.WeaponTest" />
+        <item itemvalue="JUnit.WeaponTest.check_if_name_is_correct" />
+        <item itemvalue="JUnit.WarriorTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,7 +151,7 @@
       <workItem from="1676281124606" duration="12073000" />
       <workItem from="1676358569689" duration="2000" />
       <workItem from="1676363640934" duration="5451000" />
-      <workItem from="1676372042620" duration="2431000" />
+      <workItem from="1676372042620" duration="11170000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676029897094</created>
@@ -124,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676300429666</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Seems like everything is working correctly now.&#10;Next will start working on Unit test to see if the above is actually&#10;true.">
+      <created>1676374834537</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374834537</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +210,7 @@
     <MESSAGE value="Added classes for each hero type, display attributes and level up." />
     <MESSAGE value="Moved hero classes to separate package" />
     <MESSAGE value="worked on items and equping them. Currently slight bug where it won't&#10;update stats when equipping something." />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on items and equping them. Currently slight bug where it won't&#10;update stats when equipping something." />
+    <MESSAGE value="Seems like everything is working correctly now.&#10;Next will start working on Unit test to see if the above is actually&#10;true." />
+    <option name="LAST_COMMIT_MESSAGE" value="Seems like everything is working correctly now.&#10;Next will start working on Unit test to see if the above is actually&#10;true." />
   </component>
 </project>

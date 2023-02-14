@@ -19,11 +19,14 @@ public class Mage extends Hero {
 
     public void levelUp() {
         level++;
-        levelAttributes.updateLevels(1,1,8);
+        levelAttributes.updateLevels(1,1,5);
     }
     //setting damaging attribute
-    public int damagingAttribute(){
+    public int damagingLevelAttribute(){
         return levelAttributes.intelligence;
+    }
+    public int damagingArmorAttribute(){
+        return armorAttributes.intelligence;
     }
 
 }

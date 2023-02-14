@@ -1,10 +1,10 @@
 package heroes;
 
-public class HeroAttributes {
+public class Attributes {
     public int strength;
     public int dexterity;
     public int intelligence;
-    public HeroAttributes(int str, int dex, int intelligence){
+    public Attributes(int str, int dex, int intelligence){
         this.strength = str;
         this.dexterity = dex;
         this.intelligence = intelligence;
@@ -14,10 +14,10 @@ public class HeroAttributes {
         this.strength += str;
         this.intelligence += intelligence;
     }
-    public void addLevelsFromClass(HeroAttributes stats){
+    public void addLevelsFromClass(Attributes stats){
         updateLevels(stats.strength, stats.dexterity, stats.intelligence);
     }
-    public void removeLevelsFromClass(HeroAttributes stats){
+    public void removeLevelsFromClass(Attributes stats){
         updateLevels(-stats.strength, -stats.dexterity, -stats.intelligence);
     }
 
