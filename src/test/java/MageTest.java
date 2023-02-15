@@ -57,7 +57,7 @@ public class MageTest {
         assertArrayEquals(expected,actual);
     }
 
-    @Test
+    /*@Test
     public void check_if_mage_can_equip_weapon() throws InvalidWeaponException {
         //Arrange
         Mage testMage = new Mage("testName");
@@ -69,7 +69,7 @@ public class MageTest {
         //Assert
         assertEquals(expected,actual);
     }
-    /*@Test
+    @Test
     public void check_if_mage_can_equip_wrong_weapon_type() throws InvalidWeaponException {
         //Arrange
         Mage testMage = new Mage("testName");
