@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51e1e40e-92e0-4f0d-88e6-8dba650cf297" name="Changes" comment="unit testing is not fun">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in rpg-heroes">
+  <component name="RunManager" selected="JUnit.MageTest.equip_weapon_with_too_low_level_shouldRaiseInvalidWeaponException">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="rpg-heroes" />
@@ -92,20 +93,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeaponTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MageTest.equip_weapon_with_too_low_level_shouldRaiseInvalidWeaponException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-heroes" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WeaponTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="MageTest" />
+      <option name="METHOD_NAME" value="equip_weapon_with_too_low_level_shouldRaiseInvalidWeaponException" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeaponTest.check_if_name_is_correct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MageTest.equip_wrong_weapon_shouldRaiseInvalidWeaponException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-heroes" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WeaponTest" />
-      <option name="METHOD_NAME" value="check_if_name_is_correct" />
+      <option name="MAIN_CLASS_NAME" value="MageTest" />
+      <option name="METHOD_NAME" value="equip_wrong_weapon_shouldRaiseInvalidWeaponException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MageTest.equip_weapon_with_too_low_level_shouldRaiseInvalidWeaponException" />
+        <item itemvalue="JUnit.MageTest.equip_wrong_weapon_shouldRaiseInvalidWeaponException" />
         <item itemvalue="JUnit.All in rpg-heroes" />
         <item itemvalue="JUnit.MageTest" />
         <item itemvalue="JUnit.ArmorTest" />
-        <item itemvalue="JUnit.WeaponTest" />
-        <item itemvalue="JUnit.WeaponTest.check_if_name_is_correct" />
       </list>
     </recent_temporary>
   </component>
@@ -137,6 +139,7 @@
       <workItem from="1676372042620" duration="11426000" />
       <workItem from="1676445695472" duration="4000" />
       <workItem from="1676452476904" duration="4000" />
+      <workItem from="1676452557354" duration="6098000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1676029897094</created>
@@ -180,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676383577650</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="unit testing is not fun">
+      <created>1676452609015</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676452609015</updated>
+    </task>
+    <task id="LOCAL-00008" summary="unit testing is not fun">
+      <created>1676452780822</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676452780822</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,5 +222,8 @@
     <MESSAGE value="Seems like everything is working correctly now.&#10;Next will start working on Unit test to see if the above is actually&#10;true." />
     <MESSAGE value="unit testing is not fun" />
     <option name="LAST_COMMIT_MESSAGE" value="unit testing is not fun" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rpg_heroes$All_in_rpg_heroes.ic" NAME="All in rpg-heroes Coverage Results" MODIFIED="1676461511135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

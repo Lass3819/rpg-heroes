@@ -7,8 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class MageTest {
 
@@ -57,7 +56,7 @@ public class MageTest {
         assertArrayEquals(expected,actual);
     }
 
-    /*@Test
+    @Test
     public void check_if_mage_can_equip_weapon() throws InvalidWeaponException {
         //Arrange
         Mage testMage = new Mage("testName");
@@ -70,16 +69,32 @@ public class MageTest {
         assertEquals(expected,actual);
     }
     @Test
-    public void check_if_mage_can_equip_wrong_weapon_type() throws InvalidWeaponException {
+    public void equip_wrong_weapon_shouldRaiseInvalidWeaponException(){
         //Arrange
         Mage testMage = new Mage("testName");
         Weapon testWeapon = new Weapon("testWeapon", 1, WeaponType.Swords, 50);
-        String expected = "testWeapon";
+        String expected = "Your class cannot equip this item";
         //Act
-        testMage.equip(testWeapon);
-        String actual = testMage.equipment.get(Slot.Weapon).name;
+        InvalidWeaponException exception =
+                assertThrows(InvalidWeaponException.class,()->testMage.equip(testWeapon));
+
         //Assert
-        assertEquals(expected,actual);
-    }*/
+        assertEquals(exception.getMessage(),expected);
+    }
+
+    @Test
+    public void equip_weapon_with_too_low_level_shouldRaiseInvalidWeaponException(){
+        Mage testMage = new Mage("testName");
+        Weapon testWeapon = new Weapon("testWeapon", 10, WeaponType.Swords, 50);
+        String expected = "You are too low level to equip that";
+        //Act
+        InvalidWeaponException exception =
+                assertThrows(InvalidWeaponException.class,()->testMage.equip(testWeapon));
+
+        //Assert
+        assertEquals(exception.getMessage(),expected);
+
+    }
+
 
 }
