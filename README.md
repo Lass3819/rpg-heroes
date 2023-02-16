@@ -1,4 +1,4 @@
-# rpg-heroes
+# Rpg-Heroes
 Exercise in object oriented programming by making the the stat system of a game consisting of 4 classes:
 Mage, Ranger, Rogue and Warrior.
 
