@@ -49,4 +49,5 @@ public class RangerTest {
         //Assert
         assertArrayEquals(expected,actual);
     }
+
 }
