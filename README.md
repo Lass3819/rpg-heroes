@@ -9,9 +9,9 @@ And finally we have an item system with weapons and armor.
 Based on stats, armor and weapons we then have a function damage(), which calculates the damage done based on a linear combination of
 weapon damage, armor and stats.
 
-The test report is done with Github Actions.
-To see the test report go to Actions -> Last unit test -> Build -> Build with Maven
-and below "TESTS" all the tests run will be displayed as passed.
+The test report is done with Github Actions
+To see the test report go to Actions -> Last unit test -> Build -> Test Report
+All the tests run will be displayed here.
 
 To see what each individual test does go to the source files -> src -> test -> java
 and here we have test for each class. The tests where we use all the classes together is done in mage
